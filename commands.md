@@ -1,5 +1,7 @@
 ### Datei erzeugen und in HDFS ablegen
 
+Textdatei anlegen, neues Verzeichnis im HDFS erstellen und die Datei dahin kopieren (geht auch mit -copyFromLocal, aber -put ist kürzer):
+
 ````
 [root@sandbox hadoop]# echo "Dies ist die Textdatei fuer BigData." > test.txt
 [root@sandbox hadoop]# hdfs dfs -ls
@@ -101,9 +103,11 @@ M       .
 ```
 
 Verzeichnis *snaptest* löschen:
+```
 [hdfs@sandbox hadoop]$ hdfs dfs -rm -r /snaptest
 …
 rm: Failed to move to trash: hdfs://sandbox.hortonworks.com:8020/snaptest: The directory /snaptest cannot be deleted since /snaptest is snapshottable and already has snapshots
+```
 
 Das Verzeichnis kann wegen der Snapshots nicht gelöscht werden.
 
