@@ -53,7 +53,7 @@ org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.hdfs.protocol.SnapshotEx
 createSnapshot: Directory is not a snapshottable directory: /user/root/test
 ```
 
-Das Verzeichnis muss erst snashottable gemacht werden:
+Das Verzeichnis muss erst "snapshottable" gemacht werden:
 
 ```
 [root@sandbox hadoop]# hdfs dfsadmin -allowSnapshot test
